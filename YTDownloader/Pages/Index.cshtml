@@ -1,0 +1,14 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model YTDownloader.Pages.Index
+@{
+    <link rel="stylesheet" href="/css/styles.css" />
+    <form method="get" action="https://localhost:7067/video?url={@Model.url}">
+        <div class="container">
+            <div class="search-bar">
+                <input name="URL" type="text" placeholder="Search on YouTube" value="@Model.url"/>
+                <input id="search-button" type="submit" value="Search"/>
+            </div>
+        </div>
+    </form>
+}

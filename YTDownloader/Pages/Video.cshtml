@@ -1,0 +1,22 @@
+﻿@page
+@model YTDownloader.Pages.Video
+
+<link rel="stylesheet" href="/css/styles.css" />
+<div class="container">
+    <div class="info-box">
+        <div class="video-info">
+            <h2 class="video-title">@Model.Title</h2>
+            <div class="video-author">
+                <img src="@Model.AuthorUrl" alt="Profile Picture" class="author-profile-picture"/>
+                <p>@Model.Author</p>
+            </div>
+            <div class="download-buttons">
+                <a href="https://localhost:7067/api/downloader/video?url=@Model.videoUrl"><button class="download-video-btn">Download Video</button></a>
+                <a href="https://localhost:7067/api/downloader/audio?url=@Model.videoUrl"><button class="download-video-btn">Download Audio</button></a>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <img src="@Model.ThumbnailUrl" alt="Video Thumbnail" class="thumbnail-image"/>
+        </div>
+    </div>
+</div>
